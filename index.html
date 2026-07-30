@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Élite Gastronomique | Reservas de Luxo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background-overlay"></div>
+
+    <nav class="navbar">
+        <div class="logo">L'ÉLITE<span>Gastronomique</span></div>
+        <div class="menu-mobile" id="mobile-menu"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#menu-section">Menu</a></li>
+            <li><a href="#booking-section">Reservas</a></li>
+            <li><a href="javascript:void(0)" class="btn-auth" id="user-display">Acessar Conta</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="eyebrow">Alta Gastronomia Francesa</span>
+            <h1>Momentos que se tornam <span>eternos</span></h1>
+            <div class="hero-btns">
+                <a href="#booking-section" class="btn-gold">Reservar Agora</a>
+                <a href="#menu-section" class="btn-outline">Ver Cardápio</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="container" id="menu-section">
+        <div class="section-title">
+            <h2>Notre Menu</h2>
+            <div class="gold-line"></div>
+        </div>
+        
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-tab="entradas">Entrées</button>
+            <button class="tab-btn" data-tab="principais">Principaux</button>
+            <button class="tab-btn" data-tab="sobremesas">Desserts</button>
+        </div>
+
+        <div class="tab-container">
+            <!-- Entradas -->
+            <div class="tab-panel active" id="entradas">
+                <div class="menu-grid">
+                    <div class="menu-item"><div><h4>Ostras ao Champagne</h4><p>Granité de Moët & Chandon</p></div> <span>R$ 130</span></div>
+                    <div class="menu-item"><div><h4>Tartare de Wagyu</h4><p>Corte manual e trufas negras</p></div> <span>R$ 115</span></div>
+                    <div class="menu-item"><div><h4>Foie Gras Poêlé</h4><p>Brioche de mel e figos</p></div> <span>R$ 168</span></div>
+                    <div class="menu-item"><div><h4>Escargots</h4><p>Manteiga de ervas finas</p></div> <span>R$ 125</span></div>
+                    <div class="menu-item"><div><h4>Burrata al Tartufo</h4><p>Tomates confitados</p></div> <span>R$ 105</span></div>
+                    <div class="menu-item"><div><h4>Carpaccio de Polvo</h4><p>Limão siciliano e páprica</p></div> <span>R$ 98</span></div>
+                </div>
+            </div>
+            <!-- Principais -->
+            <div class="tab-panel" id="principais">
+                <div class="menu-grid">
+                    <div class="menu-item"><div><h4>Tournedos Rossini</h4><p>Filé mignon e foie gras</p></div> <span>R$ 245</span></div>
+                    <div class="menu-item"><div><h4>Risotto de Lagosta</h4><p>Cauda grelhada e açafrão</p></div> <span>R$ 215</span></div>
+                    <div class="menu-item"><div><h4>Magret de Canard</h4><p>Pato ao molho de frutas vermelhas</p></div> <span>R$ 185</span></div>
+                    <div class="menu-item"><div><h4>Carré d'Agneau</h4><p>Cordeiro em crosta de pistache</p></div> <span>R$ 198</span></div>
+                    <div class="menu-item"><div><h4>Sole Meunière</h4><p>Linguado na manteiga noisette</p></div> <span>R$ 158</span></div>
+                    <div class="menu-item"><div><h4>Wagyu Steak A5</h4><p>Corte nobre e purê trufado</p></div> <span>R$ 380</span></div>
+                </div>
+            </div>
+            <!-- Sobremesas -->
+            <div class="tab-panel" id="sobremesas">
+                <div class="menu-grid">
+                    <div class="menu-item"><div><h4>Crème Brûlée</h4><p>Baunilha de Madagascar</p></div> <span>R$ 48</span></div>
+                    <div class="menu-item"><div><h4>Petit Gâteau de Pistache</h4><p>Gelato artesanal</p></div> <span>R$ 55</span></div>
+                    <div class="menu-item"><div><h4>Soufflé au Chocolat</h4><p>Chocolate Belga 70%</p></div> <span>R$ 62</span></div>
+                    <div class="menu-item"><div><h4>Mille-Feuille</h4><p>Creme diplomata</p></div> <span>R$ 58</span></div>
+                    <div class="menu-item"><div><h4>Tarte Tatin</h4><p>Maçãs caramelizadas</p></div> <span>R$ 52</span></div>
+                    <div class="menu-item"><div><h4>Macarons d'Élite</h4><p>Seleção de 6 sabores</p></div> <span>R$ 45</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" id="booking-section">
+        <div class="section-title">
+            <h2>Réservations</h2>
+            <p>Selecione uma mesa disponível no mapa abaixo</p>
+        </div>
+        <div class="booking-grid">
+            <div class="booking-map" id="restaurant-map"></div>
+            <div class="booking-details">
+                <div class="preview-img" id="table-image"></div>
+                <div class="info-box">
+                    <h3 id="table-title">Escolha uma mesa</h3>
+                    <p id="table-desc">Clique no mapa para ver os detalhes da mesa.</p>
+                    <form id="booking-form" class="hidden">
+                        <div class="input-group">
+                            <label>Data</label>
+                            <input type="date" id="book-date" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Horário</label>
+                            <select id="book-time" required>
+                                <option value="">Escolha um horário</option>
+                                <optgroup label="Almoço">
+                                    <option>12:00</option><option>13:00</option><option>14:00</option>
+                                </optgroup>
+                                <optgroup label="Jantar">
+                                    <option>19:00</option><option>20:00</option><option>21:00</option><option>22:00</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-gold-full">Confirmar Reserva</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DE LOGIN / CADASTRO -->
+    <div class="modal-wrapper" id="auth-modal">
+        <div class="modal-content">
+            <span class="modal-close" id="close-modal">&times;</span>
+            <div class="modal-tabs">
+                <button class="auth-tab-btn active" id="tab-login-btn">Login</button>
+                <button class="auth-tab-btn" id="tab-reg-btn">Cadastro</button>
+            </div>
+            <div class="auth-form active" id="login-box">
+                <form id="form-login-exec">
+                    <input type="email" id="l-email" placeholder="E-mail" required>
+                    <input type="password" id="l-pass" placeholder="Senha" required>
+                    <button type="submit" class="btn-gold-full">Entrar</button>
+                </form>
+            </div>
+            <div class="auth-form" id="reg-box">
+                <form id="form-reg-exec">
+                    <input type="text" id="r-name" placeholder="Nome Completo" required>
+                    <input type="email" id="r-email" placeholder="E-mail" required>
+                    <input type="password" id="r-pass" placeholder="Senha (min 6 carac.)" required>
+                    <button type="submit" class="btn-gold-full">Criar Conta</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>&copy; <span id="year"></span> L'Élite Gastronomique</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
